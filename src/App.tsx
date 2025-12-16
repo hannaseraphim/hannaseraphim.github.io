@@ -1,11 +1,17 @@
+import About from "./pages/about";
+import Contact from "./pages/contact";
 import Header from "./pages/header";
 import Hero from "./pages/hero";
+import Projects from "./pages/projects";
 
 function App() {
   return (
-    <div className="bg-neutral-950 h-dvh">
+    <div>
       <Header />
       <Hero />
+      <Projects />
+      <About />
+      <Contact />
     </div>
   );
 }
