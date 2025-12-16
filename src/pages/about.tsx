@@ -2,7 +2,7 @@ function About() {
   return (
     <section
       id="about"
-      className="bg-neutral-900 h-fit flex justify-center p-10"
+      className="bg-neutral-900 h-fit flex justify-center p-10  scroll-mt-20"
     >
       <div className="flex items-center justify-center flex-col gap-5">
         <h1 className="text-2xl text-neutral-200">About me</h1>

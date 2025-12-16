@@ -19,14 +19,17 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-wrap flex-col items-center justify-center gap-5 w-full h-full mb-15"
+      className="flex flex-wrap flex-col items-center justify-center gap-5 w-full h-full mb-15 scroll-mt-20"
     >
       <h1 className="text-emerald-500 text-2xl font-bold uppercase">
         Projects
       </h1>
       <div className=" flex flex-wrap gap-5 p-5 justify-center">
         {ProjectList.map((project) => (
-          <Card className="p-5 w-130 h-120 bg-neutral-900 border-neutral-700 flex flex-col justify-between">
+          <Card
+            className="p-5 w-130 h-120 bg-neutral-900 border-neutral-700 flex flex-col justify-between"
+            key={project.title}
+          >
             <div className="flex flex-col gap-2">
               <h1 className="text-emerald-500 font-bold text-xl">
                 {project.title}
@@ -34,7 +37,9 @@ function Projects() {
               <p className="text-neutral-500 text-sm">{project.description}</p>
               <div className="flex gap-1">
                 {project.techs.map((tech) => (
-                  <Badge className="bg-emerald-700">{tech}</Badge>
+                  <Badge className="bg-emerald-700" key={tech}>
+                    {tech}
+                  </Badge>
                 ))}
               </div>
             </div>

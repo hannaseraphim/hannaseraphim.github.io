@@ -6,7 +6,7 @@ import {
 
 function Header() {
   return (
-    <NavigationMenu className="min-w-dvw p-5 text-white flex justify-between">
+    <NavigationMenu className="min-w-dvw p-5 text-white flex justify-between fixed bg-neutral-950">
       <NavigationMenuList>
         <NavigationMenuItem>
           <a href="#hero" className="text-emerald-300 font-bold">
