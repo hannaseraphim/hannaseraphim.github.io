@@ -1,5 +1,7 @@
+import { Button } from "./components/ui/button";
+
 function App() {
-  return <h1 className="text-indigo-500">Hello World!</h1>;
+  return <Button className="m-2">I'm a ShadCN button</Button>;
 }
 
 export default App;
