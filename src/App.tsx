@@ -1,7 +1,11 @@
-import { Button } from "./components/ui/button";
+import Hero from "./pages/hero";
 
 function App() {
-  return <Button className="m-2">I'm a ShadCN button</Button>;
+  return (
+    <div className="bg-neutral-950 h-dvh">
+      <Hero />
+    </div>
+  );
 }
 
 export default App;
