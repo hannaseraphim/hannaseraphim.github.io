@@ -2,17 +2,26 @@ import { Github } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
+import petshopImage from "../images/petshop.jpg";
+import shippingImage from "../images/shipping.jpg";
 
 function Projects() {
   const ProjectList = [
     {
-      title: "Teste",
+      title: "Petshop API",
       description:
-        "Teste descriçãoTeste descriçãoTeste descriçãoTeste descriçãoTeste descriçãoTeste descriçãoTeste descriçãoTeste descriçãoTeste descriçãoTeste descriçãoTeste descriçãoTeste descrição",
-      techs: ["ReactJS", "NodeJS", "Express"],
-      imageUrl:
-        "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg",
-      github: "https://www.github.com/hannaseraphim",
+        "An simple API REST made for managing a petshop 🐶. Manage all registered pets, services, customers and bookings, also has an admin and employees auth system to implement on the front end. ",
+      techs: ["Express", "Typescript", "MySQL"],
+      imageUrl: petshopImage,
+      github: "https://github.com/hannaseraphim/petshop-api-ts",
+    },
+    {
+      title: "Shipping API (under development)",
+      description:
+        "An simple API REST made for managing a shipping company. The main goal is to have a unique tracking code generator, a tracking system based on coordinates and also an advanced database.",
+      techs: ["Express", "Typescript", "MongoDB"],
+      imageUrl: shippingImage,
+      github: "https://github.com/hannaseraphim/shipping-api",
     },
   ];
 
@@ -51,13 +60,15 @@ function Projects() {
               />
             </div>
             {project.github ? (
-              <Button
-                variant="outline"
-                className="w-30 cursor-pointer hover:bg-transparent hover:text-white"
-              >
-                <Github />
-                Github
-              </Button>
+              <a href={project.github} target="_blank">
+                <Button
+                  variant="outline"
+                  className="w-30 cursor-pointer hover:bg-transparent hover:text-white"
+                >
+                  <Github />
+                  Github
+                </Button>
+              </a>
             ) : (
               ""
             )}
